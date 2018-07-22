@@ -17,6 +17,7 @@ if [ "$1" = "" ]; then
 		echo "No filename or directory detected. Using $DIR as directory"
 fi
 
-find "$DIR" -type f -iname "*.mkv" -print0 | xargs -0 -i /home/steve/Applications/MKVconverters/mkvdts2ac3.sh {}
+find "$DIR" -type f -iname "*.mkv" -print0 | xargs -0 -i "/path/to/mkvdts2ac3.sh" {}
+# example: find "$DIR" -type f -iname "*.mkv" -print0 | xargs -0 -i "/home/USERNAME/mkvdts2ac3.sh" {}
 
 shopt -u nocasematch
